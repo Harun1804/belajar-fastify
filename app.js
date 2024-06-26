@@ -8,7 +8,9 @@ const options = {}
 
 module.exports = async function (fastify, opts) {
   // Place here your custom code!
-
+  fastify.register(require('@fastify/mysql'), {
+    connectionString: 'mysql://root@localhost:3306/belajar-fastify'
+  })
   // Do not touch the following lines
 
   // This loads all plugins defined in plugins
